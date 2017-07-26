@@ -54,6 +54,11 @@ body {
 
  .links-container .navbar-link:hover {
      color: rgb(233,50,117);
+     background-color: white;
+    transition-delay: .5s;
+ }
+ .links-container .navbar-link:active {
+   color: rgb(233,50,117)
  }
 
  .selling-points {
