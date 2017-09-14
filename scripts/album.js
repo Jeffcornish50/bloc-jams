@@ -1,3 +1,4 @@
+
 var albumPicasso = {
     title: 'The Colors',
     artist: 'Pablo Picasso',
@@ -12,18 +13,34 @@ var albumPicasso = {
         { title: 'Magenta', duration: '2:15'}
     ]
 };
-var albumMarconi = {
-    title: 'The Telephone',
-    artist: 'Guglielmo Marconi',
-    label: 'EM',
-    year: '1909',
-    albumArtUrl: 'assets/images/album_covers/20.png',
+
+var albumBandStand = {
+    title: 'Grand ol Nugget',
+    artist: 'MR. P',
+    label: 'DRC',
+    year: '2012',
+    albumArtUrl: 'assets/images/album_covers/13.png',
     songs: [
-        { title: 'Hello, Operator?', duration: '1:01' },
-        { title: 'Ring, ring, ring', duration: '5:01' },
-        { title: 'Fits in your pocket', duration: '3:21'},
-        { title: 'Can you hear me now?', duration: '3:14' },
-        { title: 'Wrong phone number', duration: '2:15'}
+        { title: 'Why you callin?', duration: '10:01' },
+        { title: 'Making cheeseburgers', duration: '2:37' },
+        { title: 'Have it my way', duration: '20:45'},
+        { title: 'Silence', duration: '7:23' },
+        { title: 'Stubbed my toe', duration: '4:32'}
+    ]
+};
+
+var albumMarconi= {
+  title: 'The Telephone',
+  artist: 'Guglielmo Marconi',
+  label: 'EM',
+  year: '1909',
+  albumArtUrl: 'assets/images/album_covers/13.png',
+  songs: [
+      { title: 'Hello, Operator?', duration: '1:01' },
+      { title: 'Ring, ring, ring', duration: '5:01' },
+      { title: 'Fits in your pocket', duration: '3:21'},
+      { title: 'Can you hear me now?', duration: '3:14' },
+      { title: 'Wrong phone number', duration: '2:15'}
     ]
 };
 
@@ -61,3 +78,12 @@ var albumMarconi = {
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
  };
+
+ document.getElementById("albumButton").addEventListener("click", function albumChange() {
+  var allAlbums = [albumPicasso, albumMarconi, albumBandStand];
+  for(var i =0; i < allAlbums.length; i++) {
+    if('click') {
+      setCurrentAlbum(allAlbums[i]);
+    }
+  }
+});
